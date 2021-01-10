@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "632486430585",
+    "project_id": "appfrontend-d505c",
+    "storage_bucket": "appfrontend-d505c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632486430585:android:68d6072ed67acd167b11a8",
+        "android_client_info": {
+          "package_name": "com.example.appfrontend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632486430585-fqto2be6guq8mqit9s155uqgautme6ne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtmNSH0iwisRy_rVTam5_Uku6dnoCFEvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632486430585-fqto2be6guq8mqit9s155uqgautme6ne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
