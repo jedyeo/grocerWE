@@ -1,18 +1,23 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ObjectId = Schema.ObjectId;
 
 let List = new Schema({
     name: {
         type: String,
+        required: true,
     },
     creator: {
         type: ObjectId,
+        required: true,
     },
     items: {
-        type: Array,
+        type: [ ObjectId ],
+        required: true,
     },
-    status: {
-        type: Array,
+    complete: {
+        type: Boolean,
+        required: true,
     },
 });
 

@@ -17,6 +17,13 @@ app.use('/list', listRouter);
 app.use('/item', itemRouter);
 app.use('/user', userRouter);
 
+// Connect to database
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 // Listen on PORT
 const server = app.listen(process.env.PORT, function () {
     const host = server.address().address;
