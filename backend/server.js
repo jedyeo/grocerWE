@@ -22,6 +22,7 @@ app.use('/auth', authRouter);
 // Debug route
 app.use('/', (req, res) => {
   console.log(req.body);
+  res.status(200).send(req.body);
 })
 
 // Connect to database
