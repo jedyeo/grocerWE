@@ -2,11 +2,9 @@ package com.example.appfrontend;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.accounts.AccountManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 
 
 public class MainActivity extends AppCompatActivity {
