@@ -25,9 +25,10 @@ public class ListViewActivity extends AppCompatActivity {
         Button addItemButton = findViewById(R.id.additembutton);
         EditText textBox = findViewById(R.id.inputtext);
 
-        // Instantiate new array list
+        // get the item list if it exists, else create it
         itemList = new ArrayList<>();
-        
+        // TODO: populate from database
+
         // Instantiate and create adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, itemList);
         itemListView.setAdapter(adapter);
@@ -36,8 +37,13 @@ public class ListViewActivity extends AppCompatActivity {
         addItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                itemList.add(textBox.getText().toString());
-                adapter.notifyDataSetChanged();
+                String item = textBox.getText().toString();
+
+                if (!item.equals("")) {
+                    itemList.add(textBox.getText().toString());
+                    textBox.setText("");
+                    adapter.notifyDataSetChanged();
+                }
             }
         });
     }
