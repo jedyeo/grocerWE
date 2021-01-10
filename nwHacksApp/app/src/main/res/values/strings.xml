@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">appFrontend</string>
+    <string name="app_name">grocerWE</string>
+    <string name="button_groups">GROUPS</string>
+    <string name="button_lists">LISTS</string>
 </resources>
