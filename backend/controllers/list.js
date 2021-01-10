@@ -1,5 +1,6 @@
 const List = require('../models/list');
 
+// Helper for adding and removing list elements
 async function editList(listID, itemID, operation, res) {
     const myList = await List.findById(listID).catch(() => null);
     // TODO Check item exists
@@ -24,10 +25,23 @@ async function editList(listID, itemID, operation, res) {
     }
 }
 
+
+
 module.exports = {
-    getLists: (req, res) => {
-        console.log("Here is a list placeholder!");
-        res.status(200).send({ "message": "Good" });
+    getLists: async (req, res) => {
+        myLists = await List.find({});
+        res.status(200).send(myLists);
+    },
+
+    getSpecificList: async (req, res) => {
+        try {
+            myList = await List.findById(req.params.id);
+            res.status(201).send(myList);
+        }
+        catch (err) {
+            console.log(err);
+            res.status(500).send();
+        }
     },
 
     createList: async (req, res) => {

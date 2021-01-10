@@ -5,6 +5,8 @@ const listController = require('../controllers/list');
 
 router.get('/', listController.getLists);
 
+router.get('/:id', listController.getSpecificList);
+
 router.post('/', listController.createList);
 
 router.patch('/:id/add', listController.addToList);
