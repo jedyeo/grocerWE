@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">appFrontend</string>
+    <string name="app_name">grocerWE</string>
+    <string name="button_groups">GROUPS</string>
+    <string name="button_lists">LISTS</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="button_register">Register</string>
+    <string name="button_proceed">Proceed</string>
+    <string name="text_email">Enter email...</string>
+    <string name="text_password">Enter password...</string>
 </resources>
