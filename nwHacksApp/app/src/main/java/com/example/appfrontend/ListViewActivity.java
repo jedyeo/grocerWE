@@ -1,9 +1,12 @@
 package com.example.appfrontend;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.SparseBooleanArray;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +26,7 @@ public class ListViewActivity extends AppCompatActivity {
         // Find view by ID
         ListView itemListView = findViewById(R.id.itemlistview);
         Button addItemButton = findViewById(R.id.additembutton);
+
         EditText textBox = findViewById(R.id.inputtext);
 
         // get the item list if it exists, else create it
@@ -44,6 +48,16 @@ public class ListViewActivity extends AppCompatActivity {
                     textBox.setText("");
                     adapter.notifyDataSetChanged();
                 }
+            }
+        });
+
+        // Listener to remove items
+        itemListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                itemList.remove(position);
+                adapter.notifyDataSetChanged();
+                return true;
             }
         });
     }
