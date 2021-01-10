@@ -19,6 +19,11 @@ app.use('/item', itemRouter);
 app.use('/user', userRouter);
 app.use('/auth', authRouter);
 
+// Debug route
+app.use('/', (req, res) => {
+  console.log(req.body);
+})
+
 // Connect to database
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URL, {
