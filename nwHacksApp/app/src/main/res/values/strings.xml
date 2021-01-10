@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">appFrontend</string>
+    <string name="app_name">grocerWE</string>
+    <string-array name="navigation_array">
+        <item>Lists</item>
+        <item>Friends</item>
+        <item>Groups</item>
+    </string-array>
 </resources>
