@@ -9,4 +9,5 @@
     <string name="text_password">Enter password…</string>
     <string name="text_groups">Your Groups</string>
     <string name="button_group">Add Group</string>
+    <string name="string_add_group">Add Group</string>
 </resources>
