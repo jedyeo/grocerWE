@@ -2,15 +2,16 @@ const express = require('express');
 const router = express.Router();
 
 const groupController = require('../controllers/group');
+const auth = require("../middleware/auth");
 
-router.get('/:id', groupController.getGroup);
+router.get('/:id', auth.checkCredentials, groupController.getGroup);
 
-router.post('/', groupController.createGroup);
+router.post('/', auth.checkCredentials, groupController.createGroup);
 
-router.patch('/:id', groupController.addUserToGroup);
+router.patch('/:id', auth.checkCredentials, groupController.addUserToGroup);
 
-router.patch('/:id', groupController.removeUserFromGroup);
+router.patch('/:id', auth.checkCredentials, groupController.removeUserFromGroup);
 
-router.delete('/:id', groupController.deleteGroup);
+router.delete('/:id', auth.checkCredentials, groupController.deleteGroup);
 
 module.exports = router;
