@@ -11,11 +11,13 @@ const groupRouter = require("./routes/group");
 const listRouter = require("./routes/list");
 const itemRouter = require("./routes/item");
 const userRouter = require("./routes/user");
+const authRouter = require("./routes/auth");
 
 app.use('/group', groupRouter);
 app.use('/list', listRouter);
 app.use('/item', itemRouter);
 app.use('/user', userRouter);
+app.use('/auth', authRouter);
 
 // Connect to database
 const mongoose = require('mongoose');
